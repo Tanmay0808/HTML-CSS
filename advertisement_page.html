@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ad Page</title>
+    <style>body{
+    padding:0;
+    margin:0;
+}
+.btn{
+    padding: 9px 20px;
+    border:none;
+    border-radius: 5px;
+    background-color: rgb(30, 224, 4);
+}
+header{
+    background-color:rgb(2, 27, 56);
+    display: flex;
+    justify-content: space-between;
+}
+#nav{
+    display: flex;
+    align-self: center;
+}
+#nav ul{
+    display:flex;
+    list-style: none;
+}
+#nav li:first-child{
+    font-size: 25px;
+    font-style:italic;
+    font-weight: bold;
+    padding-left: 0;
+}
+#nav li:first-child span{
+    color: rgb(69, 245, 16);
+}
+#nav li:first-child a{
+    color: rgb(248, 214, 18);
+}
+#nav li{
+    align-self:center;
+    padding: 0em 1em;
+}
+#nav li a{
+    text-decoration: none;
+    color: #fff;
+}
+#srch{
+    align-self: center;
+    padding: 0em 1em;
+}
+#intro{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    background: url(https://images.pexels.com/photos/46798/the-ball-stadion-football-the-pitch-46798.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-position: 10%;
+    width: 100%;
+    height: 400px;
+    color: #fff;
+    position: relative;
+    font-weight: bold;
+}
+
+#intro::before
+{
+    content: "";
+    position: absolute;
+    background: rgba(0,0,0,0.2);
+}
+#intro{
+    background: url('https://images.pexels.com/photos/46798/the-ball-stadion-football-the-pitch-46798.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') no-repeat center center;
+    background-size: cover;
+    -webkit-background-size: cover;
+  	-moz-background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    color: #fff;
+    background-attachment: fixed;
+}
+#intro::before{
+        content: "";
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.65);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+}
+
+#intro p{
+    grid-column: 2/4;
+    text-align:start;
+    font-size: 20px;
+    display: none;
+}
+#intro h1{
+    position: absolute;
+    color: white;
+    top: 25%;
+    left: 50%;
+    font-size: 3rem;
+    transform: translate(-50%,-50%);
+    z-index: 5;
+    text-shadow: 0 0 2px #fff;
+}
+
+
+.card img{
+    width: 100%;
+    height: 15em;
+}
+.card a{
+    text-decoration: none;
+    color: black;
+}
+#card1{
+    background-color: rgb(227, 185, 255);
+    width:30%;
+    height: auto;
+    text-align: center;
+    padding: 0 0 1.5em 0;
+    line-height: 1.5em;
+    box-shadow: 0 1.6em 1.6em rgb(99, 96, 96);
+}
+#card2{
+    background-color: rgb(252, 206, 184);
+    width:30%;
+    height: auto;
+    text-align: center;
+    padding: 0 0 1.5em 0;
+    line-height: 1.5em;
+    box-shadow: 0 1.6em 1.6em rgb(99, 96, 96);
+}
+#card3{
+    background-color: rgb(227, 245, 240);
+    width:30%;
+    height: auto;
+    text-align: center;
+    padding: 0 0 1.5em 0;
+    line-height: 1.5em;
+    box-shadow: 0 1.6em 1.6em rgb(99, 96, 96);
+}
+#section-b h1{
+    text-align: center;
+    padding: 1em 0 1em 0;
+}
+#section-b #trend{
+    display:flex;
+    justify-content: space-evenly;
+}
+#section-b{
+    background-color: rgb(195, 211, 202);
+    padding: 1em 0 7em 0;
+}
+#new{
+    margin-top: 5em;
+}
+#section-c h1{
+    text-align: center;
+    padding: 1.5em 0em;
+}
+#section-c{
+    background-color: rgba(164, 166, 167, 0.233);
+    padding: 1.5em 1em;
+}
+#category ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4,2fr);
+    grid-gap:2em;
+    margin-left: 2em;
+}
+#category img{
+    width: 100%;
+    height: auto;
+}
+.c-item{
+    text-align: center;
+    width: 70%;
+    height: auto;
+    box-shadow: 0 1.5em 1.5em rgb(155, 153, 153);
+    background-color: cornsilk;
+}
+.c-item a{
+    text-decoration: none;
+    color: black;
+}
+.c-item p{
+    padding-bottom: 1em;
+    font-size: 18px;
+    font-weight: bold;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+footer{
+    display: block;
+    text-align: center;
+    background-color:rgb(2, 27, 56) ;
+    color: white;
+    padding: 1em 0.5em;
+}
+footer ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+footer li{
+    padding:0.5em 1em;
+}
+footer li a{
+    text-decoration: none;
+    color: white;
+}
+footer span{
+    opacity: 0.5;
+    margin-right: 1em;
+}</style>
+</head>
+<body>
+    <header>
+        <div id="nav">
+            <!--<a href="" id="logo"><img src="https://www.sportsiteslabs.com/img/home/logo1.png" alt=""></a>
+            --><ul id="navbar">
+                <li class="li-item"><a href="">SPORTS<span>HUB</span></a></li>
+                <li class="li-item"><a href="">Home</a></li>
+                <li class="li-item"><a href="#section-b">Trending</a></li>
+                <li class="li-item"><a href="#category">Categories</a></li>
+            </ul>
+        </div>
+        <div id="srch">
+            <input type="search" name="" id="">
+            <button type="submit" class="btn btn-success">Search</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="section-a">
+            <div id="intro">
+                <h1>Welcome To Sportshub</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque repudiandae unde nostrum iste quidem adipisci suscipit, odit facilis cum accusantium possimus numquam odio non fuga voluptatibus culpa? Quisquam, velit officia!</p>
+            </div>
+        </section>
+
+        <section id="section-b">
+            <h1>TRENDING</h1>
+            <div id="trend">
+                <div class="card" id="card1">
+                    <a href="">
+                    <img src="https://images.pexels.com/photos/3628912/pexels-photo-3628912.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                    <h3>CRICKET</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, doloribus.</p>
+                    </a>
+                </div>
+                <div class="card" id="card2">
+                    <a href="">
+                    <img src="https://images.pexels.com/photos/3621104/pexels-photo-3621104.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                    <h3>FOOTBALL</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, doloribus.</p>
+                    </a>
+                </div>
+                <div class="card" id="card3">
+                    <a href="">
+                    <img src="https://images.pexels.com/photos/1332237/pexels-photo-1332237.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                    <h3>BASKETBALL</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, doloribus.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="section-c">
+            <h1>CATEGORIES</h1>
+            <div id="category">
+                <ul>
+                    <li><div class="c-item b1"><a href=""><img src="https://images.pexels.com/photos/3628912/pexels-photo-3628912.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""><p>CRICKET</p></a></div></li>
+                    <li><div class="c-item b2"><a href=""><img src="https://images.pexels.com/photos/1332237/pexels-photo-1332237.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt=""><p>BASKETBALL</p></a></div></li>
+                    <li><div class="c-item b3"><a href=""><img src="https://images.pexels.com/photos/3621104/pexels-photo-3621104.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt=""><p>FOOTBALL</p></a></div></li>
+                    <li><div class="c-item b4"><a href=""><img src="https://images.pexels.com/photos/1618269/pexels-photo-1618269.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt=""><p>RUGBY</p></a></div></li>
+                    <li><div class="c-item b5"><a href=""><img src="https://images.pexels.com/photos/257970/pexels-photo-257970.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""><p>BASEBALL</p></a></div></li>
+                    <li><div class="c-item b6"><a href=""><img src="https://images.pexels.com/photos/2828723/pexels-photo-2828723.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt=""><p>GOLF</p></a></div></li>
+                    <li><div class="c-item b7"><a href=""><img src="https://images.pexels.com/photos/1263426/pexels-photo-1263426.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""><p>VOLLEYBALL</p></a></div></li>
+                    <li><div class="c-item b8"><a href=""><img src="https://images.pexels.com/photos/1432039/pexels-photo-1432039.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""><p>TENNIS</p></a></div></li>
+                    <li><div class="c-item b9"><a href=""><img src="https://images.pexels.com/photos/3159812/pexels-photo-3159812.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt=""><p>ICE HOCKEY</p></a></div></li>
+                    <li><div class="c-item b10"><a href=""><img src="https://images.pexels.com/photos/976873/pexels-photo-976873.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt=""><p>TABLE TENNIS</p></a></div></li>
+                    <li><div class="c-item b11"><a href=""><img src="https://images.pexels.com/photos/2202685/pexels-photo-2202685.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt=""><p>BADMINTON</p></a></div></li>
+                    <li><div class="c-item b12"><a href=""><img src="https://images.pexels.com/photos/848618/pexels-photo-848618.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt=""><p>SKIING</p></a></div></li>
+                </ul>
+            </div>
+        </section>
+       
+        <footer>
+            <div>Copyright &copy; 2020 Sports Hub </div>
+            <div>
+                <ul>
+                    <li><a href=""><span> | </span> Facebook</a></li>
+                    <li><a href=""><span> | </span>Instagram</a></li>
+                    <li><a href=""><span> | </span>Twitter</a></li>
+                    <li><a href=""><span> | </span>Google+<span> | </span></a></li>
+                </ul>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>
