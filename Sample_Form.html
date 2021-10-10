@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G-Form</title>
+    <!--CSS STYLES-->
+    <style>
+        body{
+            background: linear-gradient(45deg,rgb(134, 202, 241),rgb(203, 227, 247),rgb(225, 227, 231));
+        }
+        .container{
+            background-color:white;
+            margin:20px 0px 40px 400px;
+            width:400px;
+            padding-left:50px;
+            padding-bottom: 20px;
+            border: 1px solid grey;
+        }
+
+        footer{
+            background-color: rgb(130, 62, 194);
+            margin: 20px 0px 0px 0px;
+            color: white;
+            height:110px;
+        }
+        .footer-logo{
+            padding-top:50px;
+            padding-left: 20px;
+        }
+        main div{
+            box-shadow:0 20px 20px rgb(165, 164, 164);
+        }
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!--HEADER-->
+    <header>
+    </header>
+
+    <!--MAIN-->
+    <main>
+        <div class="container">
+            <h2>STUDENT DETAILS</h2>
+            <form action="thank.html" method="GET">
+                <p>Name <span>*</span></p>
+                <input type="text" placeholder="Enter Your Name" required>
+                <p>Email <span>*</span></p>
+                <input type="email" placeholder="Enter Your Email" required>
+                <p>Mobile No. <span>*</span></p>
+                <input type="tel" name="" id="" placeholder="Enter Mobile Number" required>
+                <p>Course <span>*</span></p>
+                <label for="course">
+                    <input type="radio" name="course" id=""> M.C.A
+                </label><br>
+                <label for="course">
+                    <input type="radio" name="course" id=""> M.Sc 
+                </label><br>
+                <p>Year <span>*</span></p>
+                <select name="" id="">
+                    <option value="I Year">I Year</option>
+                    <option value="II Year">II Year</option>
+                    <option value="III Year">III Year</option>
+                </select>
+                <p>Enrollment No. (DU Students Only)</p>
+                <input type="text" name="" id="" >
+                <p>Graduation Result (C.G.P.A) <span>*</span></p>
+                <input type="text" name="" id="" required>
+                <br><br>
+                <p><small>Fields Marked With <span>*</span> Are Complusary</small></p>
+                <input type="submit" value="SUBMIT">
+            </form>
+        </div>
+    </main>
+</body>
+</html>
